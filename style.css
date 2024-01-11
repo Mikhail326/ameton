@@ -132,6 +132,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .top__item {
@@ -155,7 +156,11 @@ a {
 /* socials-section */
 
 .socials {
-  margin: 0 auto 80px auto;
+  padding: 0 20px;
+}
+
+.socials__wrapper {
+  margin: 0 auto;
   max-width: 996px;
   border-radius: 40px;
   background: var(--light);
@@ -192,7 +197,7 @@ a {
 .questions__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1;
+  grid-template-rows: 1fr;
   gap: 24px;
 }
 
@@ -201,6 +206,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .questions__item .item__text {
@@ -227,10 +233,9 @@ a {
 }
 
 .reference__item {
-  width: 996px;
+  max-width: 996px;
   margin: 0 auto 12px auto;
   position: relative;
-  padding: 20px 24px;
   cursor: pointer;
 }
 
@@ -250,6 +255,24 @@ a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.reference__item .item__title {
+  padding: 20px 24px;
+}
+
+.reference__item .item__text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.reference__item .item__text p {
+  padding: 0 20px 20px 20px;
+  font-size: 16px;
+  color: var(--text);
+  max-width: 85%;
 }
 
 .item__title h4:has(+ p) {
@@ -263,4 +286,157 @@ a {
   font-style: normal;
   font-weight: 500;
   line-height: 18.2px;
+}
+
+@media (max-width: 900px) {
+  .socials__wrapper {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .socials__text {
+    text-align: center;
+  }
+
+  .socials__text-title {
+    margin-bottom: 20px;
+  }
+
+  .socials__text-top {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 45px;
+    line-height: 52px;
+    padding-top: 27px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+  .top {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .top__list {
+    padding: 20px;
+  }
+
+  .top__subtitle {
+    padding: 18px 10px 0 10px;
+  }
+
+  .socials {
+    padding: 0 10px;
+  }
+
+  .socials__text-top {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .socials__list a img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .top__wrapper {
+    border-radius: 10px;
+    height: 270px;
+  }
+
+  .top,
+  .section {
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+    padding-top: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  h4 {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .top__list {
+    padding: 20px;
+  }
+
+  .top__subtitle {
+    font-size: 15px;
+    line-height: 16px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .top__list {
+    padding: 10px;
+  }
+
+  .top__item {
+    width: 125px;
+  }
+
+  .top__item a {
+    font-size: 13px;
+    gap: 4px;
+  }
+
+  .socials__wrapper {
+    border-radius: 10px;
+  }
+
+  .socials__text-top {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .socials__list a img {
+    width: 34px;
+  }
+
+  .reference__title {
+    margin-bottom: 15px;
+  }
+
+  .reference__item .item__title {
+    padding: 13px;
+  }
+
+  .reference__item::after {
+    right: 5px;
+  }
+
+  .item__title p {
+    width: 243px;
+    line-height: 15px;
+  }
+  
+  .reference__item .item__text p {
+    padding: 0 10px 10px 10px;
+    font-size: 13px;
+  }
 }
