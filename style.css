@@ -1,7 +1,8 @@
 @font-face {
   font-family: "MuseoSansCyrl";
   src: url("assets/fonts/museosanscyrl-700.eot");
-  src: url("assets/fonts/museosanscyrl-700.woff2") format("woff2"),
+  src:
+    url("assets/fonts/museosanscyrl-700.woff2") format("woff2"),
     url("assets/fonts/museosanscyrl-700.woff") format("woff"),
     url("assets/fonts/museosanscyrl-700.ttf") format("truetype");
   font-weight: 700;
@@ -11,7 +12,8 @@
 @font-face {
   font-family: "MuseoSansCyrl";
   src: url("assets/fonts/museosanscyrl-900.eot");
-  src: url("assets/fonts/museosanscyrl-900.woff2") format("woff2"),
+  src:
+    url("assets/fonts/museosanscyrl-900.woff2") format("woff2"),
     url("assets/fonts/museosanscyrl-900.woff") format("woff"),
     url("assets/fonts/museosanscyrl-900.ttf") format("truetype");
   font-weight: 900;
@@ -73,6 +75,14 @@ h2 {
   line-height: 48px;
 }
 
+h4 {
+  color: var(--dark);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 ul {
   list-style: none;
 }
@@ -81,6 +91,8 @@ a {
   color: var(--dark);
   text-decoration: none;
 }
+
+/* top-section */
 
 .top {
   margin-top: 40px;
@@ -134,8 +146,10 @@ a {
   font-weight: 700;
 }
 
+/* socials-section */
+
 .socials {
-  margin: 0 auto;
+  margin: 0 auto 80px auto;
   max-width: 996px;
   border-radius: 40px;
   background: var(--light);
@@ -160,4 +174,44 @@ a {
   align-items: center;
   justify-content: center;
   gap: 14px;
+}
+
+/* questions-section */
+
+.questions__title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.questions__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1;
+  gap: 24px;
+}
+
+.questions__item {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  background: var(--light);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+}
+
+.item__text {
+  align-self: self-start;
+}
+
+.item__text h4 {
+  margin-bottom: 8px;
+}
+
+.item__text p {
+  color: var(--text);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
 }
