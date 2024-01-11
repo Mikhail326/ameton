@@ -92,6 +92,12 @@ a {
   text-decoration: none;
 }
 
+.box__shadow {
+  border-radius: 16px;
+  background: var(--light);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+}
+
 /* top-section */
 
 .top {
@@ -195,23 +201,66 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 16px;
-  background: var(--light);
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
 }
 
-.item__text {
+.questions__item .item__text {
   align-self: self-start;
 }
 
-.item__text h4 {
+.questions__item .item__text h4 {
   margin-bottom: 8px;
 }
 
-.item__text p {
+.questions__item .item__text p {
   color: var(--text);
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 21px;
+}
+
+/* reference-section */
+
+.reference__title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.reference__item {
+  width: 996px;
+  margin: 0 auto 12px auto;
+  position: relative;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+.reference__item:last-child {
+  margin-bottom: 0;
+}
+
+.reference__item::after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translate(0, -50%);
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/img/svg/arrow.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.item__title h4:has(+ p) {
+  margin-bottom: 4px;
+}
+
+.item__title p {
+  width: 400px;
+  color: var(--text);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18.2px;
 }
