@@ -1,8 +1,7 @@
 @font-face {
   font-family: "MuseoSansCyrl";
   src: url("assets/fonts/museosanscyrl-700.eot");
-  src:
-    url("assets/fonts/museosanscyrl-700.woff2") format("woff2"),
+  src: url("assets/fonts/museosanscyrl-700.woff2") format("woff2"),
     url("assets/fonts/museosanscyrl-700.woff") format("woff"),
     url("assets/fonts/museosanscyrl-700.ttf") format("truetype");
   font-weight: 700;
@@ -12,8 +11,7 @@
 @font-face {
   font-family: "MuseoSansCyrl";
   src: url("assets/fonts/museosanscyrl-900.eot");
-  src:
-    url("assets/fonts/museosanscyrl-900.woff2") format("woff2"),
+  src: url("assets/fonts/museosanscyrl-900.woff2") format("woff2"),
     url("assets/fonts/museosanscyrl-900.woff") format("woff"),
     url("assets/fonts/museosanscyrl-900.ttf") format("truetype");
   font-weight: 900;
@@ -49,7 +47,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -67,6 +65,14 @@ h1 {
   font-weight: 900;
 }
 
+h2 {
+  color: var(--dark);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
 ul {
   list-style: none;
 }
@@ -78,6 +84,7 @@ a {
 
 .top {
   margin-top: 40px;
+  margin-bottom: 82px;
 }
 
 .top__wrapper {
@@ -125,4 +132,32 @@ a {
   font-style: normal;
   line-height: 18px;
   font-weight: 700;
+}
+
+.socials {
+  margin: 0 auto;
+  max-width: 996px;
+  border-radius: 40px;
+  background: var(--light);
+  box-shadow: 0px 20px 60px 0px rgba(26, 26, 26, 0.05);
+  padding: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials__text-top {
+  color: var(--dark);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 18px */
+  margin-bottom: 16px;
+}
+
+.socials__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
