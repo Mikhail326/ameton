@@ -1,10 +1,22 @@
 @font-face {
   font-family: "MuseoSansCyrl";
   src: url("assets/fonts/museosanscyrl-700.eot");
-  src: url("assets/fonts/museosanscyrl-700.woff2") format("woff2"),
+  src:
+    url("assets/fonts/museosanscyrl-700.woff2") format("woff2"),
     url("assets/fonts/museosanscyrl-700.woff") format("woff"),
     url("assets/fonts/museosanscyrl-700.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  src: url("assets/fonts/museosanscyrl-900.eot");
+  src:
+    url("assets/fonts/museosanscyrl-900.woff2") format("woff2"),
+    url("assets/fonts/museosanscyrl-900.woff") format("woff"),
+    url("assets/fonts/museosanscyrl-900.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -27,9 +39,9 @@
 
 :root {
   --text: #949494;
-  --dark: #1A1A1A;
-  --light: #FFF;
-  --green: #36BA5F;
+  --dark: #1a1a1a;
+  --light: #fff;
+  --green: #36ba5f;
 }
 
 body {
@@ -37,7 +49,7 @@ body {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -47,5 +59,70 @@ body {
 }
 
 h1 {
-  
+  color: var(--light);
+  text-align: center;
+  font-size: 60px;
+  line-height: 72px;
+  padding-top: 40px;
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.top {
+  margin-top: 40px;
+}
+
+.top__wrapper {
+  border-radius: 40px;
+  background-image: url("./assets/img/top-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 306px;
+}
+
+.top__subtitle {
+  margin: 0 auto;
+  max-width: 535px;
+  padding-top: 4px;
+  color: var(--light);
+  text-align: center;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.8px;
+}
+
+.top__list {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.top__item {
+  padding: 15px 0;
+  background-color: var(--light);
+  border-radius: 12px;
+  width: 160px;
+}
+
+.top__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: 700;
 }
